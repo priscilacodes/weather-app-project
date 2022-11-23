@@ -1,6 +1,6 @@
 body {
   font-family: font-family: "Cerebri Sans", Helvetica, Arial, sans-serif;
-  background: #FEF1E6;
+  background: #FFE1E1;
 }
 
 h1,h6 {
@@ -9,7 +9,7 @@ h1,h6 {
 }
 
 h1{
-font-size: 24px;
+
   margin: 0;
 }
 
@@ -46,14 +46,15 @@ li {
   margin: 70px;
   font-family: "Noto Sans Mono", monospace;
   font-size: 60px;
-  color: #90AACB;
+  color: #90A17D;
 }
 
 .container{
-    margin-top: -30px;
+    margin-top: -30px;  
 }
 
 .weather-app {
+  background: #EEEEEE;
   border: 1px solid #90AACB;
   padding: 15px;
   margin: 20px auto;
@@ -94,6 +95,7 @@ li {
   padding: 20px 80px;
   border-radius: 10px;
   max-width: 800px;
+  background: #EEEEEE;
 }
 
 .card {
