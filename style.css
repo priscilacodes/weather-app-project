@@ -1,6 +1,6 @@
 body {
   font-family: font-family: "Cerebri Sans", Helvetica, Arial, sans-serif;
-  background: #FFE1E1;
+  background: #EEEEEE; 
 }
 
 h1,h6 {
@@ -57,7 +57,7 @@ li {
 }
 
 .weather-app {
-  background: #EEEEEE;
+  background: #F6FBF4;
   border: 1px solid #829460;
   padding: 15px;
   margin: 20px auto;
@@ -105,7 +105,7 @@ li {
   padding: 20px 80px;
   border-radius: 10px;
   max-width: 800px;
-  background: #EEEEEE;
+  background: #F6FBF4;
 }
 
 .card {
