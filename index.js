@@ -41,6 +41,13 @@ function displayWeather(response) {
   descriptionDiv.innerHTML = `${description}`;
   humidityDiv.innerHTML = `Humidity: ${humidity}%`;
   windDiv.innerHTML = `Wind: ${wind} mph`;
+
+  let iconDiv = document.querySelector("#icon");
+  iconDiv.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconDiv.setAttribute("alt", response.data.weather[0].main);
 }
 
 let auckland = "Chicago";
