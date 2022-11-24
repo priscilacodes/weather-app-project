@@ -49,7 +49,7 @@ let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${auckland}&appi
 
 axios.get(apiUrl).then(displayWeather);
 
-// Current cites weather
+// Current cites weather +  Change ICONS images (sunny, clouldy...)
 
 function search(event) {
   event.preventDefault();
@@ -78,6 +78,13 @@ function search(event) {
     descriptionDiv.innerHTML = `${description}`;
     humidityDiv.innerHTML = `Humidity: ${humidity}%`;
     windDiv.innerHTML = ` Wind: ${wind} mph`;
+
+    let iconDiv = document.querySelector("#icon");
+    iconDiv.setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+    iconDiv.setAttribute("alt", response.data.weather[0].main);
   }
 
   let city = searchInput.value;
@@ -107,3 +114,5 @@ function handlePosition(position) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}&units=metric`;
   axios.get(apiUrl).then(displayWeather);
 }
+
+//
