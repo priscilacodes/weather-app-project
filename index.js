@@ -18,7 +18,7 @@ let time = now.getHours() + ":" + now.getMinutes();
 let currentDayTime = document.querySelector("#DayTime");
 currentDayTime.innerHTML = `${weekDay}, ${time}`;
 
-//weather by defauly = CHICAGO ~ it will search for Chicago on page load
+//weather by defauly = AUCKLAND ~ it will search for Chicago on page load
 
 function displayWeather(response) {
   let cityDiv = document.querySelector("#city");
@@ -50,7 +50,7 @@ function displayWeather(response) {
   iconDiv.setAttribute("alt", response.data.weather[0].main);
 }
 
-let auckland = "Chicago";
+let auckland = "Auckland";
 let key = "5275fa016fd7058fa1d4233b4614b62d";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${auckland}&appid=${key}&units=metric`;
 
