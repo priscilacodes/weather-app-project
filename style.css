@@ -92,11 +92,14 @@ li {
   margin-bottom: 20px;
 }
 
-
+.colorButton{
+  background: #AEDBCE;
+  border: none;
+}
 .button_second {
   background: #FFB085;
   margin-top: 10px;
-  border: none;
+  
 }
 
 .contaner2 {
