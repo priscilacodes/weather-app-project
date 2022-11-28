@@ -21,11 +21,13 @@ currentDayTime.innerHTML = `${weekDay}, ${time}`;
 //weather by defauly = AUCKLAND ~ it will search for Chicago on page load
 
 function displayWeather(response) {
+  celsiusTemperature = response.data.main.temp;
+
   let cityDiv = document.querySelector("#city");
   let currentCity = response.data.name;
 
   let weatherDiv = document.querySelector("#degrees");
-  let temperature = Math.round(response.data.main.temp);
+  let temperature = Math.round(celsiusTemperature);
 
   let descriptionDiv = document.querySelector("#description_weather");
   let description = response.data.weather[0].main;
@@ -65,11 +67,13 @@ function search(event) {
   cityElement.innerHTML = searchInput.value;
 
   function displayWeather(response) {
+    celsiusTemperature = response.data.main.temp;
+
     let cityDiv = document.querySelector("#city");
     let currentCity = response.data.name;
 
     let weatherDiv = document.querySelector("#degrees");
-    let temperature = Math.round(response.data.main.temp);
+    let temperature = Math.round(celsiusTemperature);
 
     let descriptionDiv = document.querySelector("#description_weather");
     let description = response.data.weather[0].main;
@@ -100,26 +104,30 @@ function search(event) {
 
   axios.get(apiUrl).then(displayWeather);
 }
+
 let form1 = document.querySelector("#formSite");
 form1.addEventListener("submit", search);
 
-// current location weather ~ Button
+//Changing C to F
 
-function currentLocation(event) {
+function showFahrenheitTemperature(event) {
   event.preventDefault();
-  navigator.geolocation.getCurrentPosition(handlePosition);
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  let weatherDiv = document.querySelector("#degrees");
+  weatherDiv.innerHTML = Math.round(fahrenheitTemperature);
 }
 
-let button1 = document.querySelector("#button_current");
-button1.addEventListener("click", currentLocation);
-
-function handlePosition(position) {
-  console.log(position);
-  let latitude = position.coords.latitude;
-  let longitude = position.coords.longitude;
-  let key = "5275fa016fd7058fa1d4233b4614b62d";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}&units=metric`;
-  axios.get(apiUrl).then(displayWeather);
+function showCelsusTemperature(event) {
+  event.preventDefault();
+  let weatherDiv = document.querySelector("#degrees");
+  weatherDiv.innerHTML = Math.round(celsiusTemperature);
 }
 
-//
+let celsiusTemperature = null;
+
+let fahrenheit_link = document.querySelector("#fahrenheit");
+fahrenheit_link.addEventListener("click", showFahrenheitTemperature);
+
+//Chamging F to C
+let celsus_link = document.querySelector("#celsus");
+celsus_link.addEventListener("click", showCelsusTemperature);
