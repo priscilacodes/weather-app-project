@@ -3,14 +3,19 @@ body {
   background: #EEEEEE; 
 }
 
-h1,h6 {
+h1,h3,h6 {
+  font-family: 'Poiret One', cursive;
   color: #829460;
+
   
 }
 
 h1{
-
   margin: 0;
+}
+
+h3{
+  text-align: center;
 }
 
 h5{
@@ -37,6 +42,10 @@ li {
   list-style: none;
 }
 
+hr{
+   margin: 30px auto;
+}
+
 #city{
   margin-bottom: 10px;
 }
@@ -47,13 +56,20 @@ li {
 .title {
   text-align: center;
   margin: 70px;
-  font-family: "Noto Sans Mono", monospace;
+   font-family: 'Poiret One', cursive;
   font-size: 60px;
   color: #90A17D;
 }
 
+.form_shape{
+    width: 500px;
+    text-align: center;
+    margin: 30px auto;
+}
+
 .container{
-    margin-top: -30px;  
+    margin-top: -30px; 
+   
 }
 
 .weather-app {
@@ -62,7 +78,7 @@ li {
   padding: 15px;
   margin: 20px auto;
   border-radius: 10px;
-  max-width: 800px;
+  max-width: 600px;
 }
 
 .weather-icon {
@@ -106,12 +122,12 @@ li {
 }
 
 .contaner2 {
-  border: 1px solid #829460;
+ 
   margin: 20px auto;
   padding: 20px 80px;
-  border-radius: 10px;
+
   max-width: 800px;
-  background: #F6FBF4;
+ 
 }
 
 .card {
