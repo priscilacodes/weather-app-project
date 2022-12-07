@@ -58,6 +58,38 @@ let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${auckland}&appi
 
 axios.get(apiUrl).then(displayWeather);
 
+//FORECAST
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forcast");
+
+  let forecastHTML = `<div class="row row-cols-1 row-cols-md-5 g-4">`;
+
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  days.forEach(function(day) {
+    forecastHTML =
+      forecastHTML +
+      `
+            <div class="col">
+              <div class="card">
+                <img src="rain.png" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">${day}</h5>
+                  <div class="weather-forecast-temperatures">
+                    <span class="weather-forecast-temperature-max"> 18° </span>
+                    <span class="weather-forecast-temperature-min"> 12° </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+         
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 // Current cites weather +  Change ICONS images (sunny, clouldy...)
 
 function search(event) {
@@ -107,6 +139,8 @@ function search(event) {
 
 let form1 = document.querySelector("#formSite");
 form1.addEventListener("submit", search);
+
+displayForecast();
 
 //Changing C to F
 
