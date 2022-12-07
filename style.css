@@ -126,7 +126,7 @@ hr{
   margin: 20px auto;
   padding: 20px 80px;
 
-  max-width: 800px;
+  max-width: 850px;
  
 }
 
@@ -134,10 +134,25 @@ hr{
   text-align: center;
   padding: 10px 5px 0 10px;
   color: #7c7c7c;
+  background: #F6FBF4;
  
 }
 
 
 .card-title {
-  font-size: 17px;
+  font-size: 20px;
+  font-family: 'Poiret One', cursive;
+   color: #90A17D;
+}
+
+.weather-forecast-temperatures{
+  color: #90A17D;
+}
+
+.weather-forecast-temperature-min{
+  opacity: 0.5;
+}
+
+.final{
+  color: #90A17D;
 }
