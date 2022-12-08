@@ -136,6 +136,8 @@ hr{
   color: #7c7c7c;
   background: #F6FBF4;
   max-width: 130px;
+  border: 1px solid #829460;
+ border-radius: 10px;
  
 }
 
