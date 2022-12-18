@@ -11,8 +11,6 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <!--Style CSS-->
-    <link rel="stylesheet" href="style.css" />
 
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,8 +20,13 @@
       rel="stylesheet"
     />
 
-    <title>Weather.now</title>
+    <!--AXIOS-->
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+
+    <!--Style CSS-->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Weather.now</title>
   </head>
   <body>
     <h1 class="title">Weather Now</h1>
@@ -99,11 +102,12 @@
       <hr />
 
       <h3>Week</h3>
-
-      <div class="contaner2">
-        <div id="forcast"></div>
-      </div>
     </div>
+
+    <div class="contaner2">
+      <div id="forecast"></div>
+    </div>
+
     <h5>
       <a href="https://github.com/priscilacodes/weather-app-project"
         >Open-source code </a
