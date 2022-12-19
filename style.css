@@ -16,6 +16,8 @@ h1{
 
 h3{
   text-align: center;
+
+  font-weight: bold;
 }
 
 h5{
@@ -43,7 +45,7 @@ li {
 }
 
 hr{
-   margin: 30px auto;
+   margin: 40px auto;
 }
 
 #city{
@@ -124,9 +126,12 @@ hr{
 .contaner2 {
  
   margin-top: 20px;
+  padding-top: 20px;
   text-align: center;
   color: #000;
-  height: 300px;
+  height: 250px;
+
+
  
 }
 
